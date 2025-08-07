@@ -13,12 +13,43 @@ M.setup = function()
     Cursor = { fg = colors.cursor, bg = colors.bg },
     CursorLine = { bg = colors.cursorline },
     Keyword = { fg = colors.keyword },
+    Visual = { bg = colors.visual },
+    Boolean = { fg = colors.keyword },
+
+    -- qf list
+    QuickFixLine = { fg = colors.directory },
+
+    -- menu
+    Pmenu          = { bg = colors.statusline },
+    PmenuSel      = { fg = colors.fg, bg = colors.cursorline },
+    PmenuMatch   = {},
+    PmenuMatchSel= {},
+    PmenuKind   = {},
+    PmenuKindSel= {},
+    PmenuExtra  = {},
+    PmenuExtraSel = {},
+    PmenuSbar    = {},
+    PmenuThumb  = {},
+
+    -- fold
+    Fold = {},
+    UfoFoldedBg = {},
+    UfoFoldedFg  = {},
+    UfoPreviewSbar= {},
+    UfoPreviewThumb= {},
+    UfoPreviewWinBar = {},
+    UfoPreviewCursorLine = {},
+    UfoFoldedEllipsis = {},
+    UfoCursorFoldedLine = {},
+
+    Special = { fg = colors.keyword },
 
     -- file structure
     Directory = { fg = colors.directory },
 
     Identifier = { fg = colors.variable },
-    Variable = { fg = colors.variable },
+    Variable = { fg = colors.fg },
+    Constant = { italic = true },
 
     -- diagnostics
     DiagnosticError = { fg = colors.diag_error, bg = colors.bg },
@@ -33,10 +64,12 @@ M.setup = function()
     MiniStatuslineModeReplace  = { fg = colors.bg, bg = colors.replacemode },
     MiniStatuslineModeCommand  = { fg = colors.bg, bg = colors.commandmode },
     MiniStatuslineModeOther  = { fg = colors.bg, bg = colors.commandmode },
-    MiniStatuslineDevinfo  = { fg = colors.bg, bg = colors.Function },
-    MiniStatuslineFilename  = {},
-    MiniStatuslineFileinfo  = { fg = colors.bg, bg = colors.comment },
-    MiniStatuslineInactive  = {},
+    MiniStatuslineDevinfo  = { fg = colors.bg, bg = colors.comment },
+    MiniStatuslineFilename  = { fg = colors.fg, bg = colors.statusline },
+    MiniStatuslineFileinfo  = { fg = colors.boolean, bg = colors.statusline },
+    MiniStatuslineInactive  = { fg = colors.linenr, bg = colors.statusline },
+
+    RenderMarkDownCode = { bg = colors.bg },
 
     -- RainbowDelimiterRed = {},
     -- RainbowDelimiterOrange = {},
@@ -46,13 +79,79 @@ M.setup = function()
     -- RainbowDelimiterBlue = {},
     -- RainbowDelimiterViolet = {},
 
-    --Treesitter
-    ["@string"] = { fg = colors.string },
+    -- Treesitter
+    ["@comment"]            = { fg = colors.comment, italic = true },
+    ["@string"]             = { fg = colors.string },
+    ["@string.escape"]      = { fg = colors.keyword },
+    ["@character"]          = { fg = colors.string },
+    ["@number"]             = { fg = colors.number },
+    ["@boolean"]            = { fg = colors.boolean },
+    ["@constant"]           = { fg = colors.constant, italic = true },
+    ["@constant.builtin"]   = { fg = colors.constant },
+
+
+    ["@function"]           = { fg = colors.Function },
+    ["@function.call"]      = { fg = colors.Function },
+    ["@function.builtin"]   = { fg = colors.Function, italic = true },
+    ["@method"]             = { fg = colors.Function },
+    ["@constructor"]        = { fg = colors.keyword },
+
+    ["@parameter"]          = { fg = colors.variable },
+    ["@variable"]           = { fg = colors.variable },
+    ["@variable.parameter"] = { fg = colors.variable },
+    ["@field"]              = { fg = colors.variable },
+    ["@property"]           = { fg = colors.property },
+    ["@type"]               = { fg = colors.keyword },
+    ["@type.builtin"]       = { fg = colors.keyword },
+    ["@namespace"]          = { fg = colors.directory },
+
+    ["@operator"]           = { fg = colors.fg },
+    ["@keyword"]            = { fg = colors.keyword },
+    ["@keyword.function"]   = { fg = colors.keyword },
+    ["@keyword.operator"]   = { fg = colors.keyword },
+    ["@keyword.return"]     = { fg = colors.keyword },
+
+    ["@punctuation.delimiter"] = { fg = colors.keyword },
+    ["@punctuation.bracket"]   = { fg = colors.fg },
+    ["@punctuation.special"]   = { fg = colors.keyword },
 
     --Lsp
-    ["@lsp"] = {}
+    -- Kotlin-Specific Treesitter Highlights
+    ["@attribute.kotlin"]        = { fg = colors.annotation },
+    ["@constructor.kotlin"]      = { fg = colors.keyword },
+    ["@type.kotlin"]             = { fg = colors.fg },
+    ["@type.builtin.kotlin"]     = { fg = colors.fg },
+    ["@function.kotlin"]         = { fg = colors.Function },
+    ["@function.call.kotlin"]    = { fg = colors.fg },
+    ["@keyword.kotlin"]          = { fg = colors.keyword },
+    ["@keyword.return.kotlin"]   = { fg = colors.keyword },
+    ["@variable.parameter.kotlin"] = { fg = colors.variable },
+    ["@property.kotlin"]         = { fg = colors.variable },
+    ["@field.kotlin"]            = { fg = colors.variable },
+    ["@string.kotlin"]           = { fg = colors.string },
+    ["@comment.kotlin"]          = { fg = colors.comment, italic = true },
+
+    -- Kotlin LSP Semantic Tokens
+    ["@lsp.type.class.kotlin"]        = { fg = colors.fg },
+    ["@lsp.type.interface.kotlin"]    = { fg = colors.fg },
+    ["@lsp.type.enum.kotlin"]         = { fg = colors.fg },
+    ["@lsp.type.enumMember.kotlin"]   = { fg = colors.constant },
+    ["@lsp.type.function.kotlin"]     = { fg = colors.Function },
+    ["@lsp.type.method.kotlin"]       = { fg = colors.fg },
+    ["@lsp.type.property.kotlin"]     = { fg = colors.variable },
+    ["@lsp.type.variable.kotlin"]     = { fg = colors.fg },
+    ["@lsp.type.parameter.kotlin"]    = { fg = colors.fg },
+    ["@lsp.type.namespace.kotlin"]    = { fg = colors.fg },
+    ["@lsp.type.keyword.kotlin"]      = { fg = colors.keyword },
+    ["@lsp.mod.static.kotlin"]        = { fg = colors.Function, bold = true },
+    ["@lsp.mod.readonly.kotlin"]      = { fg = colors.fg },
+
+    -- ["@lsp.type.method.kotlin"] = {},
+    -- ["@lsp.mod.declaration.kotlin"] = { fg = colors.fg },
+    ["@lsp.typemod.method.declaration.kotlin"] = { fg = colors.Function }
 
   }
+
 end
 
 return M

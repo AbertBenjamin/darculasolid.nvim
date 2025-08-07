@@ -16,7 +16,9 @@ return {
   number     = "#6897bb",
   boolean    = "#cc7832",
   operator   = "#ced2d5",
-  variable   = "#9775a4",
+  variable   = "#ced2d5",
+  property   = "#9775a4",
+  annotation = "#bbb52a",
 
   -- UI
   cursor     = "#ececec",
