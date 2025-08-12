@@ -71,13 +71,13 @@ M.setup = function()
 
     RenderMarkDownCode = { bg = colors.bg },
 
-    -- RainbowDelimiterRed = {},
-    -- RainbowDelimiterOrange = {},
-    -- RainbowDelimiterYellow = {},
-    -- RainbowDelimiterGreen = {},
-    -- RainbowDelimiterCyan = {},
-    -- RainbowDelimiterBlue = {},
-    -- RainbowDelimiterViolet = {},
+    RainbowDelimiterRed = {},
+    RainbowDelimiterOrange = {},
+    RainbowDelimiterYellow = { fg = "#e8ba35" },
+    RainbowDelimiterGreen = { fg = "#54a857" },
+    RainbowDelimiterCyan = { fg = "" },
+    RainbowDelimiterBlue = { fg = "#359ff4" },
+    RainbowDelimiterViolet = {fg = "#6e7ed9"},
 
     -- Treesitter
     ["@comment"]            = { fg = colors.comment, italic = true },
