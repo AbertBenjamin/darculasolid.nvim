@@ -68,7 +68,7 @@ M.setup = function()
     MiniStatuslineModeOther  = { fg = colors.bg, bg = colors.commandmode },
     MiniStatuslineDevinfo  = { fg = colors.bg, bg = colors.comment },
     MiniStatuslineFilename  = { fg = colors.fg, bg = colors.statusline },
-    MiniStatuslineFileinfo  = { fg = colors.boolean, bg = colors.statusline },
+    MiniStatuslineFileinfo  = { fg = colors.comment, bg = colors.statusline },
     MiniStatuslineInactive  = { fg = colors.linenr, bg = colors.statusline },
 
     RenderMarkDownCode = { bg = colors.bg },
@@ -158,15 +158,6 @@ M.setup = function()
     ["@lsp.typemod.method.declaration.kotlin"] = { fg = colors.Function },
 
   }
-
-  for group, opts in pairs(groups) do
-    vim.api.nvim_set_hl(0, group, opts)
-  end
-
-  vim.api.nvim_set_hl(0, "SnacksIndentChunk", { link = "RainbowDelimiterBlue" })
-
-
-
 
 end
 
