@@ -16,6 +16,7 @@ M.setup = function()
     Visual = { bg = colors.visual },
     Boolean = { fg = colors.keyword },
     Search = { bg = colors.search },
+    CurSearch = { bg = colors.search },
 
     -- qf list
     QuickFixLine = { fg = colors.directory },
