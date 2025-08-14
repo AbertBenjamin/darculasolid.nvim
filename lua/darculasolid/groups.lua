@@ -54,10 +54,10 @@ M.setup = function()
     Constant = { italic = true },
 
     -- diagnostics
-    DiagnosticError = { fg = colors.diag_error, bg = colors.bg },
-    DiagnosticWarn = { fg = colors.diag_warn, bg = colors.bg },
-    DiagnosticInfo = { fg = colors.diag_info, bg = colors.bg },
-    DiagnosticHint = { fg = colors.diag_hint, bg = colors.bg },
+    DiagnosticError = { fg = colors.diag_error },
+    DiagnosticWarn = { fg = colors.diag_warn },
+    DiagnosticInfo = { fg = colors.diag_info },
+    DiagnosticHint = { fg = colors.diag_hint },
 
     -- statusline
     MiniStatuslineModeNormal  = { fg = colors.bg, bg = colors.normalmode },
