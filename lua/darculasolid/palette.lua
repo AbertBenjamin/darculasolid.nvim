@@ -19,6 +19,11 @@ return {
   variable   = "#ced2d5",
   property   = "#9775a4",
   annotation = "#bbb52a",
+  
+  -- git
+  added      = "#454d3b",
+  removed    = "#656e75",
+  changed    = "#363d47",
 
   -- UI
   cursor     = "#ececec",

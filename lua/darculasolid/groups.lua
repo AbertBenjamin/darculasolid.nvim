@@ -4,7 +4,7 @@ local M = {}
 local colors = require("darculasolid.palette")
 
 M.setup = function()
-  return {
+  local groups = {
 
     -- Standard
     Normal  = { fg = colors.fg, bg = colors.bg },
@@ -81,6 +81,11 @@ M.setup = function()
     RainbowDelimiterBlue = { fg = "#359ff4" },
     RainbowDelimiterViolet = {fg = "#6e7ed9"},
 
+    -- git diff
+    Added = { fg = colors.added },
+    Removed = { fg = colors.removed },
+    Changed = { fg = colors.changed },
+
     -- Treesitter
     ["@comment"]            = { fg = colors.comment, italic = true },
     ["@string"]             = { fg = colors.string },
@@ -150,9 +155,18 @@ M.setup = function()
 
     -- ["@lsp.type.method.kotlin"] = {},
     -- ["@lsp.mod.declaration.kotlin"] = { fg = colors.fg },
-    ["@lsp.typemod.method.declaration.kotlin"] = { fg = colors.Function }
+    ["@lsp.typemod.method.declaration.kotlin"] = { fg = colors.Function },
 
   }
+
+  for group, opts in pairs(groups) do
+    vim.api.nvim_set_hl(0, group, opts)
+  end
+
+  vim.api.nvim_set_hl(0, "SnacksIndentChunk", { link = "RainbowDelimiterBlue" })
+
+
+
 
 end
 
