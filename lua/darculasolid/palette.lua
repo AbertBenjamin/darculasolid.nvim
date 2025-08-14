@@ -45,6 +45,6 @@ return {
   diag_error = "#bc3f3c",
   diag_warn  = "#be9117",
   diag_info  = "#659c6b",
-  diag_hint  = "#b4befe",
+  diag_hint  = "#72737a",
 
 }
