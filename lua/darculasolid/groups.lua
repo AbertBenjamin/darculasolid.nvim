@@ -158,6 +158,7 @@ M.setup = function()
     ["@lsp.typemod.method.declaration.kotlin"] = { fg = colors.Function },
 
   }
+  return groups
 
 end
 
