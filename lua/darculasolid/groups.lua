@@ -44,7 +44,7 @@ M.setup = function()
     UfoFoldedEllipsis = {},
     UfoCursorFoldedLine = {},
 
-    Special = { fg = colors.keyword },
+    Special = { fg = colors.added },
 
     -- file structure
     Directory = { fg = colors.directory },
@@ -58,6 +58,9 @@ M.setup = function()
     DiagnosticWarn = { fg = colors.diag_warn },
     DiagnosticInfo = { fg = colors.diag_info },
     DiagnosticHint = { fg = colors.diag_hint },
+
+    -- lazy
+    LazySpecial = { fg = colors.added },
 
     -- statusline
     MiniStatuslineModeNormal  = { fg = colors.bg, bg = colors.normalmode },
