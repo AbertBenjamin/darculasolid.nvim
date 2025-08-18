@@ -60,7 +60,7 @@ M.setup = function()
     DiagnosticHint = { fg = colors.diag_hint },
 
     -- lazy
-    LazySpecial = { fg = colors.added },
+    LazySpecial = { fg = colors.fg },
 
     -- statusline
     MiniStatuslineModeNormal  = { fg = colors.bg, bg = colors.normalmode },
