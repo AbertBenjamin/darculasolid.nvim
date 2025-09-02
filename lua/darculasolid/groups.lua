@@ -44,7 +44,7 @@ M.setup = function()
     UfoFoldedEllipsis = {},
     UfoCursorFoldedLine = {},
 
-    Special = { fg = colors.added },
+    Special = { fg = colors.comment },
 
     -- file structure
     Directory = { fg = colors.directory },
@@ -145,7 +145,7 @@ M.setup = function()
     ["@lsp.type.class.kotlin"]        = { fg = colors.fg },
     ["@lsp.type.interface.kotlin"]    = { fg = colors.fg },
     ["@lsp.type.enum.kotlin"]         = { fg = colors.fg },
-    ["@lsp.type.enumMember.kotlin"]   = { fg = colors.constant },
+    ["@lsp.type.enumMember.kotlin"]   = { fg = colors.constant, italic = true },
     ["@lsp.type.function.kotlin"]     = { fg = colors.Function },
     ["@lsp.type.method.kotlin"]       = { fg = colors.fg },
     ["@lsp.type.property.kotlin"]     = { fg = colors.variable },
