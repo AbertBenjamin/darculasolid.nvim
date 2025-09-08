@@ -143,6 +143,7 @@ M.setup = function()
 
     -- Kotlin LSP Semantic Tokens
     ["@lsp.type.class.kotlin"]        = { fg = colors.fg },
+    ["@lsp.type.struct.kotlin"]       = { fg = colors.fg },
     ["@lsp.type.interface.kotlin"]    = { fg = colors.fg },
     ["@lsp.type.enum.kotlin"]         = { fg = colors.fg },
     ["@lsp.type.enumMember.kotlin"]   = { fg = colors.constant, italic = true },
