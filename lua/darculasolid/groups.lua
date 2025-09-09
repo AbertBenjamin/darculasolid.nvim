@@ -150,6 +150,8 @@ M.setup = function()
     ["@lsp.type.enumMember.kotlin"]   = { fg = colors.constant, italic = true },
     ["@lsp.type.function.kotlin"]     = { fg = colors.Function },
     ["@lsp.type.method.kotlin"]       = { fg = colors.fg },
+
+    ["@lsp.typemod.parameter.readonly.kotlin"] = { fg = colors.number },
     ["@lsp.type.property.kotlin"]     = { fg = colors.variable },
     ["@lsp.type.variable.kotlin"]     = { fg = colors.fg },
     ["@lsp.type.parameter.kotlin"]    = { fg = colors.fg },
