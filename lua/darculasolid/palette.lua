@@ -9,7 +9,7 @@ return {
 
   -- Syntax
   keyword    = "#cc7832",
-  Function   = "#b28c51",
+  Function   = "#ffc66d",
   string     = "#87a161",
   constant   = "#cdd6f4",
   type       = "#babcbf",
