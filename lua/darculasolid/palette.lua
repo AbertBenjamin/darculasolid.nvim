@@ -1,6 +1,7 @@
 return {
 
-  bg         = "#1c1c1c",
+  -- bg         = "#1c1c1c",
+  bg         = "none",
   fg         = "#ced2d5",
   cursorline = "#323335",
   selection  = "#1c2b3a",
