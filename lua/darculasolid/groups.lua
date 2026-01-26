@@ -23,26 +23,26 @@ M.setup = function()
 
     -- menu
     Pmenu          = { bg = colors.statusline },
-    PmenuSel      = { fg = colors.fg, bg = colors.cursorline },
-    PmenuMatch   = {},
-    PmenuMatchSel= {},
-    PmenuKind   = {},
-    PmenuKindSel= {},
-    PmenuExtra  = {},
-    PmenuExtraSel = {},
-    PmenuSbar    = {},
-    PmenuThumb  = {},
+    PmenuSel       = { fg = colors.fg, bg = colors.cursorline },
+    PmenuMatch     = {},
+    PmenuMatchSel  = {},
+    PmenuKind      = {},
+    PmenuKindSel   = {},
+    PmenuExtra     = {},
+    PmenuExtraSel  = {},
+    PmenuSbar      = {},
+    PmenuThumb     = {},
 
     -- fold
-    Fold = {},
-    UfoFoldedBg = {},
-    UfoFoldedFg  = {},
-    UfoPreviewSbar= {},
-    UfoPreviewThumb= {},
-    UfoPreviewWinBar = {},
+    Fold                 = {},
+    UfoFoldedBg          = {},
+    UfoFoldedFg          = {},
+    UfoPreviewSbar       = {},
+    UfoPreviewThumb      = {},
+    UfoPreviewWinBar     = {},
     UfoPreviewCursorLine = {},
-    UfoFoldedEllipsis = {},
-    UfoCursorFoldedLine = {},
+    UfoFoldedEllipsis    = {},
+    UfoCursorFoldedLine  = {},
 
     Special = { fg = colors.comment },
 
@@ -99,6 +99,7 @@ M.setup = function()
     ["@constant"]           = { fg = colors.constant, italic = true },
     ["@constant.builtin"]   = { fg = colors.constant },
 
+    ["@string.yaml"] = { fg = colors.fg },
 
     ["@function"]           = { fg = colors.Function },
     ["@function.call"]      = { fg = colors.Function },
