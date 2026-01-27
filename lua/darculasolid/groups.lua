@@ -100,6 +100,7 @@ M.setup = function()
     ["@constant.builtin"]   = { fg = colors.constant },
 
     ["@string.yaml"] = { fg = colors.fg },
+    ["@property.yaml"] = { fg = colors.boolean, bold = true },
 
     ["@function"]           = { fg = colors.Function },
     ["@function.call"]      = { fg = colors.Function },
