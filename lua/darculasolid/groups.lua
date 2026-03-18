@@ -160,6 +160,7 @@ M.setup = function()
     ["@lsp.type.keyword.kotlin"]      = { fg = colors.keyword },
     ["@lsp.mod.static.kotlin"]        = { fg = colors.Function, bold = true },
     ["@lsp.mod.readonly.kotlin"]      = { fg = colors.fg },
+    ["DiagnosticUnderlineError"] = { undercurl = true, sp = colors.error },
 
     -- ["@lsp.type.method.kotlin"] = {},
     -- ["@lsp.mod.declaration.kotlin"] = { fg = colors.fg },
