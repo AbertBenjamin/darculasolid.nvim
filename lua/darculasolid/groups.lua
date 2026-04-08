@@ -12,7 +12,7 @@ M.setup = function()
     Cursor                                         = { fg = colors.cursor, bg = colors.bg },
     CursorLine                                     = { bg = colors.cursorline },
     Keyword                                        = { fg = colors.keyword },
-    Visual                                         = { bg = colors.visual },
+    Visual                                         = { bg = colors.visual, fg = colors.fg },
     Boolean                                        = { fg = colors.keyword },
     Search                                         = { bg = colors.search },
     CurSearch                                      = { bg = colors.search },
