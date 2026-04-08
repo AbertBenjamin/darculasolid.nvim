@@ -10,6 +10,7 @@ M.setup = function()
     Comment                                        = { fg = colors.comment, italic = true },
     Function                                       = { fg = colors.Function },
     Cursor                                         = { fg = colors.cursor, bg = colors.bg },
+    vCursor                                        = { fg = colors.cursor, bg = colors.bg },
     CursorLine                                     = { bg = colors.cursorline },
     Keyword                                        = { fg = colors.keyword },
     Visual                                         = { bg = colors.visual, fg = colors.fg },
