@@ -74,7 +74,7 @@ M.setup = function()
     MiniStatuslineFileinfo                         = { fg = colors.comment, bg = colors.statusline },
     MiniStatuslineInactive                         = { fg = colors.linenr, bg = colors.statusline },
 
-    RenderMarkDownCode                             = { bg = colors.bg },
+    RenderMarkdownCode                             = { bg = colors.bg },
 
     RainbowDelimiterRed                            = {},
     RainbowDelimiterOrange                         = {},
