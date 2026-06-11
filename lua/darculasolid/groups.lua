@@ -8,8 +8,11 @@ M.setup = function()
 
     -- Editor core
     Normal       = { fg = c.fg, bg = c.bg },
+    NormalNC     = { fg = c.fg, bg = c.bg },
     NormalFloat  = { fg = c.fg, bg = c.statusline },
     FloatBorder  = { fg = c.split, bg = c.statusline },
+    FloatTitle   = { fg = c.fg, bg = c.statusline, bold = true },
+    FloatFooter  = { fg = c.comment, bg = c.statusline },
     Cursor       = { fg = c.bg_solid, bg = c.cursor },
     CursorLine   = { bg = c.cursorline },
     CursorLineNr = { fg = c.linenr_cur, bold = true },
@@ -141,6 +144,14 @@ M.setup = function()
     RainbowDelimiterCyan   = { fg = "#56b6c2" },
     RainbowDelimiterBlue   = { fg = "#359ff4" },
     RainbowDelimiterViolet = { fg = "#6e7ed9" },
+    -- Compatibility aliases used by older/misspelled user configs.
+    RainBowDelimiterRed    = { fg = c.keyword },
+    RainBowDelimiterOrange = { fg = "#e8ba35" },
+    RainBowDelimiterYellow = { fg = "#e8ba35" },
+    RainBowDelimiterGreen  = { fg = "#54a857" },
+    RainBowDelimiterCyan   = { fg = "#56b6c2" },
+    RainBowDelimiterBlue   = { fg = "#359ff4" },
+    RainBowDelimiterViolet = { fg = "#6e7ed9" },
 
     -- Lazy
     LazySpecial = { fg = c.fg },
@@ -198,7 +209,7 @@ M.setup = function()
     ["@lsp.type.class"]         = { fg = c.fg },
     ["@lsp.type.type"]          = { fg = c.fg },
     ["@lsp.type.interface"]     = { fg = c.fg },
-    ["@lsp.type.enum"]          = { fg = c.fg },
+    ["@lsp.type.enum"]          = { fg = c.constant, italic = true },
     ["@lsp.type.namespace"]     = { fg = c.fg },
     ["@lsp.type.property"]      = { fg = c.property },
     ["@lsp.type.variable"]      = { fg = c.fg },
@@ -207,6 +218,7 @@ M.setup = function()
 
     -- Kotlin treesitter
     ["@attribute.kotlin"]          = { fg = c.annotation },
+    ["@constant.kotlin"]           = { fg = c.constant, italic = true },
     ["@constructor.kotlin"]        = { fg = c.keyword },
     ["@type.kotlin"]               = { fg = c.fg },
     ["@type.builtin.kotlin"]       = { fg = c.fg },
@@ -214,6 +226,7 @@ M.setup = function()
     ["@function.call.kotlin"]      = { fg = c.fg },
     ["@keyword.kotlin"]            = { fg = c.keyword, bold = true },
     ["@keyword.return.kotlin"]     = { fg = c.keyword, bold = true },
+    ["@variable.kotlin"]           = { fg = c.variable },
     ["@variable.parameter.kotlin"] = { fg = c.variable },
     ["@property.kotlin"]           = { fg = c.property },
     ["@field.kotlin"]              = { fg = c.property },
@@ -225,7 +238,7 @@ M.setup = function()
     ["@lsp.type.struct.kotlin"]       = { fg = c.fg },
     ["@lsp.type.type.kotlin"]         = { fg = c.fg },
     ["@lsp.type.interface.kotlin"]    = { fg = c.fg },
-    ["@lsp.type.enum.kotlin"]         = { fg = c.fg },
+    ["@lsp.type.enum.kotlin"]         = { fg = c.constant, italic = true },
     ["@lsp.type.enumMember.kotlin"]   = { fg = c.constant, italic = true },
     ["@lsp.type.function.kotlin"]     = { fg = c.Function },
     ["@lsp.type.method.kotlin"]       = { fg = c.fg },
@@ -234,8 +247,12 @@ M.setup = function()
     ["@lsp.type.parameter.kotlin"]    = { fg = c.fg },
     ["@lsp.type.namespace.kotlin"]    = { fg = c.fg },
     ["@lsp.type.keyword.kotlin"]      = { fg = c.keyword, bold = true },
-    ["@lsp.mod.static.kotlin"]        = { fg = c.constant, italic = true },
-    ["@lsp.mod.readonly.kotlin"]      = { fg = c.fg },
+    ["@lsp.mod.declaration.kotlin"]   = {},
+    ["@lsp.mod.static.kotlin"]        = {},
+    ["@lsp.typemod.property.declaration.kotlin"] = { fg = c.property },
+    ["@lsp.typemod.property.static.kotlin"] = { fg = c.constant, italic = true },
+    ["@lsp.mod.readonly.kotlin"]      = {},
+    ["@lsp.typemod.property.readonly.kotlin"] = { fg = c.constant, italic = true },
     ["@lsp.typemod.method.declaration.kotlin"] = { fg = c.Function },
 
   }
