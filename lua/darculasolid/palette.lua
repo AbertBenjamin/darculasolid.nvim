@@ -26,9 +26,10 @@ return {
   diff_change = "#363d47",
   diff_text  = "#3a4e6e",
   -- Git (visible foreground for signs & status)
-  sign_add   = "#8ea765",
-  sign_change = "#6897bb",
-  sign_delete = "#ff5b56",
+  sign_add      = "#8ea765",
+  sign_change   = "#6897bb",
+  sign_delete   = "#ff5b56",
+  git_untracked = "#c75450",
 
   -- UI
   cursor     = "#f7f7f7",

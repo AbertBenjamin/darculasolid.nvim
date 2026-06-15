@@ -111,6 +111,30 @@ M.setup = function()
     GitSignsChange = { fg = c.sign_change },
     GitSignsDelete = { fg = c.sign_delete },
 
+    -- Fyler git status (IntelliJ-style)
+    -- NB: Fyler overrides these after ColorScheme; init.lua re-applies via vim.schedule
+    FylerGitModified  = { fg = c.sign_change },    -- modified  → lyseblå
+    FylerGitStaged    = { fg = c.sign_add },        -- staged    → grønn
+    FylerGitUntracked = { fg = c.git_untracked },   -- untracked → rød
+    FylerGitDeleted   = { fg = c.sign_delete },
+    FylerGitRenamed   = { fg = c.sign_change },
+    FylerGitConflict  = { fg = c.diag_warn },
+    FylerGitIgnored   = { fg = c.comment },
+
+    -- Fyler UI
+    FylerDirectoryName = { fg = c.directory },
+    FylerDirectoryIcon = { fg = c.directory },
+    FylerNormal        = { fg = c.fg },
+    FylerIndentGuide   = { fg = c.indent },
+
+    -- Kotlin filikon lilla (IntelliJ-stil)
+    -- mini.icons: Kotlin bruker MiniIconsBlue som standard; sett lilla med:
+    --   require('mini.icons').setup({ filetype = { kotlin = { hl = 'MiniIconsPurple' } } })
+    MiniIconsPurple = { fg = "#7f52ff" },
+    -- nvim-web-devicons fallback
+    DevIconKt  = { fg = "#7f52ff" },
+    DevIconKts = { fg = "#7f52ff" },
+
     -- Fold / UFO
     UfoFoldedBg          = { bg = c.fold },
     UfoFoldedFg          = { fg = c.comment },
